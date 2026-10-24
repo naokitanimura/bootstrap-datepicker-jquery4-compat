@@ -1,0 +1,21 @@
+{
+  "name": "bootstrap-datepicker-jquery4-compat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "bootstrap-datepicker の日付範囲フォームを jQuery / datepicker の3パターンで検証する",
+  "scripts": {
+    "start": "http-server -c-1 -p 8080 ."
+  },
+  "dependencies": {
+    "bdp1100": "npm:bootstrap-datepicker@1.10.0",
+    "bdp180": "npm:bootstrap-datepicker@1.8.0",
+    "bdp190": "npm:bootstrap-datepicker@1.9.0",
+    "bootstrap": "3.4.1",
+    "jquery-migrate4": "npm:jquery-migrate@4.0.2",
+    "jquery1": "npm:jquery@1.12.4",
+    "jquery4": "npm:jquery@4.0.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

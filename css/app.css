@@ -1,0 +1,42 @@
+body {
+  padding: 20px 0 40px;
+}
+
+.pattern-label {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  background: #337ab7;
+  color: #fff;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+#date-range {
+  max-width: 420px;
+}
+
+.log-list {
+  max-height: 240px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 8px 12px;
+  list-style: none;
+  font-family: Menlo, Consolas, monospace;
+  font-size: 12px;
+  background: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+}
+
+.log-list li {
+  padding: 2px 0;
+  border-bottom: 1px dotted #ddd;
+  word-break: break-all;
+}
+
+.log-list:empty::before {
+  content: "（まだありません）";
+  color: #999;
+}

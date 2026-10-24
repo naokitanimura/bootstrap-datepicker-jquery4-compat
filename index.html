@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>bootstrap-datepicker 検証パターン一覧</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="container">
+  <h1>bootstrap-datepicker 日付範囲フォーム検証</h1>
+  <table class="table table-bordered">
+    <thead>
+      <tr><th>パターン</th><th>jQuery</th><th>bootstrap-datepicker</th><th>jQuery Migrate</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="pattern-a-jq1-bdp1.8.0.html"><span class="pattern-label">A</span>開く</a></td>
+        <td>1.12.4</td><td>1.8.0</td><td>なし</td>
+      </tr>
+      <tr>
+        <td><a href="pattern-b-jq4-bdp1.9.0.html"><span class="pattern-label">B</span>開く</a></td>
+        <td>4.0.0</td><td>1.9.0</td><td>4.0.2（警告ログ出力）</td>
+      </tr>
+      <tr>
+        <td><a href="pattern-c-jq4-bdp1.10.0.html"><span class="pattern-label">C</span>開く</a></td>
+        <td>4.0.0</td><td>1.10.0</td><td>4.0.2（警告ログ出力）</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="help-block">全パターン共通: Bootstrap 3.4.1（CSS のみ）、日本語ロケール、表示形式 yyyy/mm/dd、<code>.input-daterange</code> による範囲指定。</p>
+</div>
+</body>
+</html>

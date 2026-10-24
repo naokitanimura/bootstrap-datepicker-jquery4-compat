@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>パターンA: jQuery 1.12.4 + bootstrap-datepicker 1.8.0</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/bdp180/dist/css/bootstrap-datepicker3.min.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body data-expected='{"jquery":"1.12.4","datepicker":"1.8.0"}'>
+<div class="container">
+  <p><a href="index.html">&laquo; パターン一覧へ</a></p>
+  <h1><span class="pattern-label">A</span>jQuery 1.12.4 + bootstrap-datepicker 1.8.0</h1>
+
+  <h2>環境情報</h2>
+  <table class="table table-condensed table-bordered" id="env-table">
+    <thead><tr><th>ライブラリ</th><th>実際に読み込まれたバージョン</th><th>期待値</th></tr></thead>
+    <tbody></tbody>
+  </table>
+
+  <h2>日付範囲フォーム</h2>
+  <form id="range-form" novalidate>
+    <div class="form-group">
+      <label for="start-date">期間（開始日 〜 終了日）</label>
+      <div class="input-daterange input-group" id="date-range">
+        <input type="text" class="form-control" id="start-date" name="start" placeholder="開始日 yyyy/mm/dd" autocomplete="off">
+        <span class="input-group-addon">〜</span>
+        <input type="text" class="form-control" id="end-date" name="end" placeholder="終了日 yyyy/mm/dd" autocomplete="off">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">送信（検証のみ）</button>
+    <button type="button" class="btn btn-default" id="form-clear">フォームクリア</button>
+  </form>
+  <div id="validation-result" style="margin-top: 15px;"></div>
+
+  <h2>イベントログ <button type="button" class="btn btn-default btn-xs" id="clear-log">クリア</button></h2>
+  <ul class="log-list" id="event-log"></ul>
+
+</div>
+
+<script src="node_modules/jquery1/dist/jquery.js"></script>
+<script src="node_modules/bdp180/dist/js/bootstrap-datepicker.js"></script>
+<script src="node_modules/bdp180/dist/locales/bootstrap-datepicker.ja.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

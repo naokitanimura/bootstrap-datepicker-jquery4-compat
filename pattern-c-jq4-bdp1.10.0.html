@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>パターンC: jQuery 4.0.0 + bootstrap-datepicker 1.10.0</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/bdp1100/dist/css/bootstrap-datepicker3.min.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body data-expected='{"jquery":"4.0.0","datepicker":"1.10.0","migrate":"4.0.2"}'>
+<div class="container">
+  <p><a href="index.html">&laquo; パターン一覧へ</a></p>
+  <h1><span class="pattern-label">C</span>jQuery 4.0.0 + bootstrap-datepicker 1.10.0</h1>
+
+  <h2>環境情報</h2>
+  <table class="table table-condensed table-bordered" id="env-table">
+    <thead><tr><th>ライブラリ</th><th>実際に読み込まれたバージョン</th><th>期待値</th></tr></thead>
+    <tbody></tbody>
+  </table>
+
+  <h2>日付範囲フォーム</h2>
+  <form id="range-form" novalidate>
+    <div class="form-group">
+      <label for="start-date">期間（開始日 〜 終了日）</label>
+      <div class="input-daterange input-group" id="date-range">
+        <input type="text" class="form-control" id="start-date" name="start" placeholder="開始日 yyyy/mm/dd" autocomplete="off">
+        <span class="input-group-addon">〜</span>
+        <input type="text" class="form-control" id="end-date" name="end" placeholder="終了日 yyyy/mm/dd" autocomplete="off">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">送信（検証のみ）</button>
+    <button type="button" class="btn btn-default" id="form-clear">フォームクリア</button>
+  </form>
+  <div id="validation-result" style="margin-top: 15px;"></div>
+
+  <h2>イベントログ <button type="button" class="btn btn-default btn-xs" id="clear-log">クリア</button></h2>
+  <ul class="log-list" id="event-log"></ul>
+
+  <div id="migrate-panel">
+    <h2>jQuery Migrate 出力
+      <small>migrateMessages: <span id="migrate-count">0</span> 件</small>
+      <button type="button" class="btn btn-default btn-xs" id="migrate-reset">リセット</button>
+    </h2>
+    <p class="help-block">ブラウザのコンソールにもスタックトレース付きで出力されます（migrateTrace = true）。</p>
+    <ul class="log-list" id="migrate-log"></ul>
+  </div>
+</div>
+
+<script src="js/migrate-capture.js"></script>
+<script src="node_modules/jquery4/dist/jquery.js"></script>
+<script>
+  // Migrate の設定は Migrate 読み込み前に行う
+  jQuery.migrateMute = false;
+  jQuery.migrateTrace = true;
+  jQuery.migrateDeduplicateMessages = true;
+</script>
+<script src="node_modules/jquery-migrate4/dist/jquery-migrate.js"></script>
+<script src="node_modules/bdp1100/dist/js/bootstrap-datepicker.js"></script>
+<script src="node_modules/bdp1100/dist/locales/bootstrap-datepicker.ja.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
